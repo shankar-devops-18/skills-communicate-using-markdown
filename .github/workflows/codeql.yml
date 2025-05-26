@@ -13,11 +13,14 @@ name: "CodeQL Advanced"
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main","protected" ]
   pull_request:
     branches: [ "main" ]
+    paths-ignore: 
+      - '**/*.md'
+      - '**/*.txt'
   schedule:
-    - cron: '21 15 * * 5'
+    - cron: '20 14 * * 1'
 
 jobs:
   analyze:
